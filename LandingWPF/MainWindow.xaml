@@ -1,0 +1,142 @@
+﻿<Window x:Class="LandingWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LandingWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1039" Width="650">
+    <Grid>
+        <DockPanel LastChildFill="False">
+            <Border DockPanel.Dock="Top" Height="30px" Background="Black">
+                <DockPanel LastChildFill="False">
+                    <Border Background="#0079cd" Height="30px" Width="30px"/>
+                    <Label Foreground="White">Office 365</Label>
+                    <Label Foreground="White" Margin="10px 0px">Share Point</Label>
+                    <Image Width="25px" DockPanel.Dock="Right" Margin="0px 0px 10px 0px" Source="Images/user_avatar.png"/>
+                    <Image Width="25px" DockPanel.Dock="Right" Margin="0px 0px 10px 0px" Source="Images/settings.png"/>
+                    <Image Width="25px" DockPanel.Dock="Right" Margin="0px 0px 10px 0px" Source="Images/notification.png"/>
+                    <Image Width="25px" DockPanel.Dock="Right" Margin="0px 0px 10px 0px" Source="Images/skype.png"/>
+                </DockPanel>
+            </Border>
+            <DockPanel LastChildFill="False" Height="60px" DockPanel.Dock="Top" Margin="20px 5px 20px 0px">
+                <Border Background="#0079cd" Height="40px" Width="40px">
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Foreground="White">SS</Label>
+                </Border>
+                <DockPanel LastChildFill="False" Margin="10px 5px 0px 0px">
+                    <Label DockPanel.Dock="Top" FontSize="15" Margin="0px 0px 0px -5px">Sitio de  exhibition</Label>
+                    <StackPanel Orientation="Horizontal">
+                        <Label DockPanel.Dock="Top" FontSize="10">Home</Label>
+                        <Label DockPanel.Dock="Top" FontSize="10">Documents</Label>
+                        <Label DockPanel.Dock="Top" FontSize="10">Pages</Label>
+                        <Label DockPanel.Dock="Top" FontSize="10">Edit</Label>
+                    </StackPanel>
+                </DockPanel>
+                <DockPanel LastChildFill="False" DockPanel.Dock="Right">
+                    <Label DockPanel.Dock="Top" HorizontalAlignment="Right">Share site</Label>
+                    <Border Width="100px" Height="20" DockPanel.Dock="Top" BorderThickness="1px" BorderBrush="Black">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Height="15px" Width="15px" Source="Images/search.png" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <Label Margin="0px 5px 0px 0px" Height="30px" FontSize="10" VerticalAlignment="Center">Search</Label>
+                        </StackPanel>
+                    </Border>
+                </DockPanel>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top" Height="20px" Background="#f4f4f4" LastChildFill="False">
+                <StackPanel DockPanel.Dock="Left" Margin="20px 0px 0px 0px" VerticalAlignment="Center" Orientation="Horizontal">
+                    <Image Source="Images/plus.png" Height="10px"></Image>
+                    <Label FontSize="9" Margin="0px -1.7px 0px 0px">New</Label>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                    <Label FontSize="9" Margin="0px -1.7px 0px 0px">Published</Label>
+                    <Border Background="#0079cd">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Margin="10px 0px 0px 0px" Height="15px" Source="Images/pencil.png"/>
+                            <Label Width="40px" FontSize="9" Margin="0px -1.7px 0px 0px" Foreground="White">Edit</Label>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </DockPanel>
+            <Grid DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200px"/>
+                    <RowDefinition Height="200px"/>
+                    <RowDefinition Height="200px"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#0079cd"/>
+                <Border Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Background="#0079cd"/>
+                <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Background="#0079cd"/>
+                <DockPanel Grid.Column="2" Margin="20px" LastChildFill="False">
+                    <Border DockPanel.Dock="Top" Background="#0079cd" Width="30px" HorizontalAlignment="Left">
+                        <Label FontSize="9px" Foreground="White">NEW</Label>
+                    </Border>
+                    <Label Padding="0px 10px 0px 10px" DockPanel.Dock="Top" FontSize="17">Realizar una impresion</Label>
+                    <TextBlock DockPanel.Dock="Top" FontSize="9">
+                        Lorem Ipsum is simply dummy text <LineBreak/>
+                        of the printing and typesetting industry.<LineBreak/>
+                        Lorem Ipsum has been the industry's<LineBreak/>
+                        standard dummy text ever since the 1500s,<LineBreak/>
+                        when an unknown printer took
+                    </TextBlock>
+                    <Label Foreground="#0079cd" DockPanel.Dock="Bottom" FontSize="10">LEARN ABOUT COMMUNICATION SITES</Label>
+                </DockPanel>
+                <DockPanel Grid.Column="0" Grid.Row="1" Margin="20px" LastChildFill="False">
+                    <Border DockPanel.Dock="Top" Background="#0079cd" Width="30px" HorizontalAlignment="Left">
+                        <Label FontSize="9px" Foreground="White">NEW</Label>
+                    </Border>
+                    <Label Padding="0px 10px 0px 10px" DockPanel.Dock="Top" FontSize="17">Realizar una impresion</Label>
+                    <TextBlock DockPanel.Dock="Top" FontSize="9">
+                        Lorem Ipsum is simply dummy text <LineBreak/>
+                        of the printing and typesetting industry.<LineBreak/>
+                        Lorem Ipsum has been the industry's<LineBreak/>
+                        standard dummy text ever since the 1500s,<LineBreak/>
+                        when an unknown printer took
+                    </TextBlock>
+                    <Label Foreground="#0079cd" DockPanel.Dock="Bottom" FontSize="10">LEARN ABOUT COMMUNICATION SITES</Label>
+                </DockPanel>
+                <DockPanel Grid.Column="2" Grid.Row="2" Margin="20px" LastChildFill="False">
+                    <Border DockPanel.Dock="Top" Background="#0079cd" Width="30px" HorizontalAlignment="Left">
+                        <Label FontSize="9px" Foreground="White">NEW</Label>
+                    </Border>
+                    <Label Padding="0px 10px 0px 10px" DockPanel.Dock="Top" FontSize="17">Realizar una impresion</Label>
+                    <TextBlock DockPanel.Dock="Top" FontSize="9">
+                        Lorem Ipsum is simply dummy text <LineBreak/>
+                        of the printing and typesetting industry.<LineBreak/>
+                        Lorem Ipsum has been the industry's<LineBreak/>
+                        standard dummy text ever since the 1500s,<LineBreak/>
+                        when an unknown printer took
+                    </TextBlock>
+                    <Label Foreground="#0079cd" DockPanel.Dock="Bottom" FontSize="10">LEARN ABOUT COMMUNICATION SITES</Label>
+                </DockPanel>
+            </Grid>
+            <Label DockPanel.Dock="Top" Margin="20px 10px 0px 0px">Image Gallery</Label>
+            <DockPanel LastChildFill="False" Margin="10px">
+                <Grid DockPanel.Dock="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/> 
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Border Margin="10px" Grid.Row="0" Grid.Column="0" Background="#0079cd" Width="200px" Height="100px"/>
+                    <Border Margin="10px" Grid.Row="0" Grid.Column="1" Background="#0079cd" Width="200px" Height="100px"/>
+                    <Border Margin="10px" Grid.Row="0" Grid.Column="2" Background="#0079cd" Width="200px" Height="100px"/>
+                    <Border Margin="10px" Grid.Row="0" Grid.Column="3" Background="#0079cd" Width="200px" Height="100px"/>
+                    <Border Margin="10px" Grid.Row="1" Grid.Column="0" Background="#0079cd" Width="200px" Height="100px"/>
+                    <Border Margin="10px" Grid.Row="1" Grid.Column="1" Background="#0079cd" Width="200px" Height="100px"/>
+                    <Border Margin="10px" Grid.Row="1" Grid.Column="2" Background="#0079cd" Width="200px" Height="100px"/>
+                    <Border Margin="10px" Grid.Row="1" Grid.Column="3" Background="#0079cd" Width="200px" Height="100px"/>
+                </Grid>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>
