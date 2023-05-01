@@ -1,0 +1,28 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Markov/2.0.0": {
+        "runtime": {
+          "lib/netcoreapp2.0/Markov.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.22"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Markov/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rcogg/3YCtFHL3RbcLpELZ6PMvmmH8oqoRVCve5+Io+jAUimY0GPnRfwbUSfiW3rZ8m7474U8judjNpghJWGsw==",
+      "path": "markov/2.0.0",
+      "hashPath": "markov.2.0.0.nupkg.sha512"
+    }
+  }
+}
