@@ -45,11 +45,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bogda\\source\\repos\\WPF\\KeyboardTrainer\\KeyboardTrainer.csproj",
+      "projectUniqueName": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\KeyboardTrainer\\KeyboardTrainer.csproj",
       "projectName": "KeyboardTrainer",
-      "projectPath": "C:\\Users\\bogda\\source\\repos\\WPF\\KeyboardTrainer\\KeyboardTrainer.csproj",
+      "projectPath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\KeyboardTrainer\\KeyboardTrainer.csproj",
       "packagesPath": "C:\\Users\\bogda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bogda\\source\\repos\\WPF\\KeyboardTrainer\\obj\\",
+      "outputPath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\KeyboardTrainer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bogda\\AppData\\Roaming\\NuGet\\NuGet.Config",

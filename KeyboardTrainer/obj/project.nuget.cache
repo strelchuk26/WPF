@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xB5YJtTWX13cP2TAOUHnBiauPRjHEpO0b3wehr1gARH/5F7f7gv6L9sP0+6DYtvvAW4E0qRGDTekFh4AQTOSjw==",
+  "dgSpecHash": "EZD65PbTVyQs1j1cgtJDUwDE9kIufZW4VrTI+7tengdjMVftRfyfggXBHwsyKiQkeKawefUkna9EG1wAd2wtDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bogda\\source\\repos\\WPF\\KeyboardTrainer\\KeyboardTrainer.csproj",
+  "projectFilePath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\KeyboardTrainer\\KeyboardTrainer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bogda\\.nuget\\packages\\markov\\2.0.0\\markov.2.0.0.nupkg.sha512"
   ],

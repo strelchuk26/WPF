@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KeyboardTrainer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
-    <DockPanel>
+        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize">
+    <DockPanel LastChildFill="False">
         <Grid DockPanel.Dock="Top" Height="50px" Background="#55C5FF" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
@@ -17,12 +17,43 @@
             </Grid.ColumnDefinitions>
             <Button Click="StartBtnClick" Margin="7" Background="#FFE925" FontSize="20" Foreground="#0E55A0">Start</Button>
             <Label Grid.Column="1" Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">Level:</Label>
-            <Border Grid.Column="2" Background="White">
+            <Border Grid.Column="2" Background="#fafafa" Padding="7">
                 <StackPanel VerticalAlignment="Center">
-                    <Slider TickPlacement="BottomRight"/>
-                    
+                    <Slider x:Name="slider" IsSnapToTickEnabled="True" TickPlacement="BottomRight" Maximum="3" SmallChange="1" Minimum="1"/>
+                    <DockPanel>
+                        <Label HorizontalAlignment="Left" FontSize="10">Easy</Label>
+                        <Label HorizontalAlignment="Right" FontSize="10">Hard</Label>
+                    </DockPanel>
                 </StackPanel>
             </Border>
+            <Label Grid.Column="3" Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">Case sensetive:</Label>
+            <StackPanel Grid.Column="4" VerticalAlignment="Center">
+                <RadioButton IsChecked="True" x:Name="yesRadio" Foreground="White">Yes</RadioButton>
+                <RadioButton x:Name="noRadio" Foreground="White">No</RadioButton>
+            </StackPanel>
         </Grid>
+        <Grid DockPanel.Dock="Bottom" Height="40px" Background="#55C5FF">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                <Label FontSize="20" Foreground="White">Mistakes:</Label>
+                <Label x:Name="mistakesCountLabel" FontSize="20" Foreground="White">0</Label>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center" Grid.Column="1" Orientation="Horizontal">
+                <Label FontSize="20" Foreground="White">Time:</Label>
+                <Label x:Name="timerText" FontSize="20" Foreground="White">0</Label>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center" Grid.Column="2" Orientation="Horizontal">
+                <Label FontSize="20" Foreground="White">Progress:</Label>
+                <ProgressBar x:Name="progressBar" Width="150" Height="20"></ProgressBar>
+            </StackPanel>
+        </Grid>
+        <DockPanel LastChildFill="False">
+            <TextBlock FontSize="20" x:Name="textBlock" TextWrapping="Wrap" Padding="10" Width="800" Height="100" DockPanel.Dock="Top"></TextBlock>
+            <TextBox FontSize="20" TextChanged="textBox_TextChanged" x:Name="textBox" BorderBrush="#d1d1d1" BorderThickness="0 4 0 0" TextWrapping="Wrap" Padding="10" Width="800"></TextBox>
+        </DockPanel>
     </DockPanel>
 </Window>
