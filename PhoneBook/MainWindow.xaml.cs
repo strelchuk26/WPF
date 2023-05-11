@@ -49,8 +49,8 @@ namespace PhoneBook
 
 		public void AddContact()
 		{
-			if (SelectedContact != null)
-				this.contacts.Add(SelectedContact);
+			//if (SelectedContact != null)
+			//	this.contacts.Remove(SelectedContact);
 		}
 
 		public void RemoveContact()

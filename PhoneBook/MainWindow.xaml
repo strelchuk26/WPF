@@ -18,13 +18,13 @@
         <DockPanel Grid.Column="2" LastChildFill="False">
             <StackPanel Margin="10" DockPanel.Dock="Top">
                 <Label>Name</Label>
-                <ComboBox></ComboBox>
+                <ComboBox Name="NameCmbBox"></ComboBox>
                 <Label>Surname</Label>
-                <ComboBox></ComboBox>
+                <ComboBox Name="SurnameCmbBox"></ComboBox>
                 <Label>Phone</Label>
-                <ComboBox></ComboBox>
+                <ComboBox Name="PhoneCmbBox"></ComboBox>
                 <Label>Country</Label>
-                <ComboBox></ComboBox>
+                <ComboBox Name="CountryCmbBox"></ComboBox>
             </StackPanel>
             <StackPanel Margin="10" DockPanel.Dock="Bottom" Orientation="Horizontal">
                 <Button Click="addBtnClick" x:Name="addBtn" Width="125" Height="30" Margin="10 0 10 0">Add</Button>

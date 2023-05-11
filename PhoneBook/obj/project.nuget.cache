@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bRteGBt81KwTNmOds1FgW6CcLxfGYwseNvTx5K5tnNL/gsGagkjl8vE/AWzE/55nFCzCHcFyI6ZviG1Sjj7mHg==",
+  "dgSpecHash": "+lCGm8Mum59FgqPIiaDHy2v4eXrGN+FfPSHj85BMri3oyrX3lqiTFpCauWAYVcX5f6++afCKozVGQdrGp3oepw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bogda\\source\\repos\\WPF\\PhoneBook\\PhoneBook.csproj",
+  "projectFilePath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\PhoneBook\\PhoneBook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bogda\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
     "C:\\Users\\bogda\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512"
