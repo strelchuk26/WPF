@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FtI/TFGd25KDI1Z4nAxpIaju2MI1Hdtao5cebGb6ufVabNuvHkAYpmjfUqk6cik7b24uidzYLY+wKUGtq5y1CQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\FileViewer\\FileViewer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bogda\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
+    "C:\\Users\\bogda\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,48 @@
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\bin\Debug\net6.0-windows\FileViewer.exe
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\bin\Debug\net6.0-windows\FileViewer.deps.json
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\bin\Debug\net6.0-windows\FileViewer.runtimeconfig.json
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\bin\Debug\net6.0-windows\FileViewer.dll
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\bin\Debug\net6.0-windows\FileViewer.pdb
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer.csproj.AssemblyReference.cache
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer_MarkupCompile.cache
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer_MarkupCompile.lref
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer.g.resources
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer.AssemblyInfoInputs.cache
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer.AssemblyInfo.cs
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer.csproj.CoreCompileInputs.cache
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer.csproj.Fody.CopyLocal.cache
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer.dll
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\refint\FileViewer.dll
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer.pdb
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer.genruntimeconfig.cache
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\ref\FileViewer.dll
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\Views\MainWindow.baml
+C:\Users\bogda\OneDrive\Документы\GitHub\WPF\FileViewer\obj\Debug\net6.0-windows\FileViewer.csproj.ResolveComReference.cache
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\bin\Debug\net6.0-windows\FileViewer.exe
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\bin\Debug\net6.0-windows\FileViewer.deps.json
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\bin\Debug\net6.0-windows\FileViewer.runtimeconfig.json
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\bin\Debug\net6.0-windows\FileViewer.dll
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\bin\Debug\net6.0-windows\FileViewer.pdb
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer.csproj.AssemblyReference.cache
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer.csproj.ResolveComReference.cache
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer_MarkupCompile.cache
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer_MarkupCompile.lref
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\Views\MainWindow.baml
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer.g.resources
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer.AssemblyInfoInputs.cache
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer.AssemblyInfo.cs
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer.csproj.CoreCompileInputs.cache
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer.csproj.Fody.CopyLocal.cache
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer.dll
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\refint\FileViewer.dll
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer.pdb
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\FileViewer.genruntimeconfig.cache
+C:\Users\bogda\OneDrive\Рабочий стол\FileViewer\obj\Debug\net6.0-windows\ref\FileViewer.dll

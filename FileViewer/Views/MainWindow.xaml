@@ -1,0 +1,74 @@
+﻿<Window x:Class="FileViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileViewer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="700">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="12*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <DockPanel>
+                <Button Click="OpenDirectoryBtnClick" Margin="0 0 10 0" Width="100" DockPanel.Dock="Left">Open</Button>
+                <TextBox Text="{Binding CurrentDirectoryPath, Mode=TwoWay}" DockPanel.Dock="Right"></TextBox>
+            </DockPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="12*"/>
+            </Grid.RowDefinitions>
+            <Label HorizontalContentAlignment="Center">Files</Label>
+            <ListBox Grid.Row="1" SelectedItem="{Binding SelectedFile, Mode=TwoWay}" ItemsSource="{Binding Files}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Label FontSize="20" Content="{Binding Name}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        <Label HorizontalContentAlignment="Center" Grid.Column="1" FontSize="15">File Info</Label>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalContentAlignment="Center">Name:</Label>
+            <Label Content="{Binding SelectedFile.Name}" HorizontalContentAlignment="Left" Grid.Column="1"/>
+            <Label HorizontalContentAlignment="Center" Grid.Row="1">Path:</Label>
+            <Label Content="{Binding SelectedFile.Path}" HorizontalContentAlignment="Left" Grid.Row="1" Grid.Column="1"/>
+            <Label HorizontalContentAlignment="Center" Grid.Row="2">Size:</Label>
+            <Label Content="{Binding SelectedFile.Size}" HorizontalContentAlignment="Left" Grid.Row="2" Grid.Column="1"/>
+            <Label HorizontalContentAlignment="Center" Grid.Row="3">Modify Date:</Label>
+            <Label Content="{Binding SelectedFile.ModifyDate}" HorizontalContentAlignment="Left" Grid.Row="3" Grid.Column="1"/>
+            <Label HorizontalContentAlignment="Center" Grid.Row="4">Create Date:</Label>
+            <Label Content="{Binding SelectedFile.CreateDate}" HorizontalContentAlignment="Left" Grid.Row="4" Grid.Column="1"/>
+            <Grid  Grid.Row="5" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button IsEnabled="{Binding isPrevBtnEnabled}" Click="PrevFileBtnClick" Margin="5" Grid.Column="0">Prev</Button>
+                <Button IsEnabled="{Binding isOpenBtnEnabled}" Click="OpenFileBtnClick" Margin="5" Grid.Column="1">Open</Button>
+                <Button IsEnabled="{Binding isNextBtnEnabled}" Click="NextFileBtnClick" Margin="5" Grid.Column="2">Next</Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

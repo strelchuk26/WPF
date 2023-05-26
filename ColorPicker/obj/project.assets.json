@@ -96,11 +96,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bogda\\source\\repos\\WPF\\ColorPicker\\ColorPicker.csproj",
+      "projectUniqueName": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\ColorPicker\\ColorPicker.csproj",
       "projectName": "ColorPicker",
-      "projectPath": "C:\\Users\\bogda\\source\\repos\\WPF\\ColorPicker\\ColorPicker.csproj",
+      "projectPath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\ColorPicker\\ColorPicker.csproj",
       "packagesPath": "C:\\Users\\bogda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bogda\\source\\repos\\WPF\\ColorPicker\\obj\\",
+      "outputPath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\ColorPicker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bogda\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eDxF9lmAEqs6puL8RnKXJ8hgktdplJuMZUR9zCRC8Kbk+hv6CZkMbvWDIKLxNSRNq6cHj0GDlFZUkhOjsnn5+w==",
+  "dgSpecHash": "oGEuUo4hfRroukpbaXzYLqXg0kfRw5UNp0fcjTZlQL/FCyq4gMr+VTNrjGlMQplvdP8CqvS3WxNT0V5d7LTjjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bogda\\source\\repos\\WPF\\ColorPicker\\ColorPicker.csproj",
+  "projectFilePath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\ColorPicker\\ColorPicker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bogda\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
     "C:\\Users\\bogda\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512"
