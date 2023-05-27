@@ -72,7 +72,7 @@ namespace FileViewer
 
 			public void OpenFile()
 			{
-				//Process.Start(SelectedFile.Path);	- чомусь не працює(
+				Process.Start(new ProcessStartInfo(SelectedFile.Path) { UseShellExecute = true });
 			}
 		}
 	}
