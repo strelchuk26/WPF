@@ -3,11 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:KeyboardTrainer"
+        xmlns:local="clr-namespace:KeyboardTrainer" xmlns:system="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize">
+    <Window.Resources>
+        <SolidColorBrush x:Key="textBlockBg" Color="White"></SolidColorBrush>
+        <SolidColorBrush x:Key="textBlockFg" Color="Black"></SolidColorBrush>
+        <SolidColorBrush x:Key="borderBg" Color="#55C5FF"></SolidColorBrush>
+        <SolidColorBrush x:Key="buttonBg" Color="#FFE925"></SolidColorBrush>
+        <SolidColorBrush x:Key="buttonFg" Color="#0E55A0"></SolidColorBrush>
+        <SolidColorBrush x:Key="sliderBg" Color="#fafafa"></SolidColorBrush>
+    </Window.Resources>
     <DockPanel LastChildFill="False">
-        <Grid DockPanel.Dock="Top" Height="50px" Background="#55C5FF" VerticalAlignment="Top">
+        <Grid DockPanel.Dock="Top" Height="50px" Background="{DynamicResource borderBg}" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition/>
@@ -15,9 +24,9 @@
                 <ColumnDefinition Width="1.5*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Click="StartBtnClick" Margin="7" Background="#FFE925" FontSize="20" Foreground="#0E55A0">Start</Button>
+            <Button Click="StartBtnClick" Margin="7" Background="{DynamicResource buttonBg}" FontSize="20" Foreground="{DynamicResource buttonFg}">Start</Button>
             <Label Grid.Column="1" Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">Level:</Label>
-            <Border Grid.Column="2" Background="#fafafa" Padding="7">
+            <Border Grid.Column="2" Background="{DynamicResource sliderBg}" Padding="7">
                 <StackPanel VerticalAlignment="Center">
                     <Slider x:Name="slider" IsSnapToTickEnabled="True" TickPlacement="BottomRight" Maximum="3" SmallChange="1" Minimum="1"/>
                     <DockPanel>
@@ -26,13 +35,21 @@
                     </DockPanel>
                 </StackPanel>
             </Border>
-            <Label Grid.Column="3" Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">Case sensetive:</Label>
-            <StackPanel Grid.Column="4" VerticalAlignment="Center">
-                <RadioButton IsChecked="True" x:Name="yesRadio" Foreground="White">Yes</RadioButton>
-                <RadioButton x:Name="noRadio" Foreground="White">No</RadioButton>
-            </StackPanel>
+            <Grid Grid.Column="3" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Foreground="White" FontSize="15" VerticalContentAlignment="Center" Grid.RowSpan="2">Case sensetive:</Label>
+                <RadioButton Foreground="White" VerticalContentAlignment="Center" Grid.Column="1">Yes</RadioButton>
+                <RadioButton Foreground="White" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="1">No</RadioButton>
+            </Grid>
         </Grid>
-        <Grid DockPanel.Dock="Bottom" Height="40px" Background="#55C5FF">
+        <Grid DockPanel.Dock="Bottom" Height="40px" Background="{DynamicResource borderBg}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -52,8 +69,8 @@
             </StackPanel>
         </Grid>
         <DockPanel LastChildFill="False">
-            <TextBlock FontSize="20" x:Name="textBlock" TextWrapping="Wrap" Padding="10" Width="800" Height="100" DockPanel.Dock="Top"></TextBlock>
-            <TextBox FontSize="20" TextChanged="textBox_TextChanged" x:Name="textBox" BorderBrush="#d1d1d1" BorderThickness="0 4 0 0" TextWrapping="Wrap" Padding="10" Width="800"></TextBox>
+            <TextBlock FontSize="20" Foreground="{DynamicResource textBlockFg}" Background="{DynamicResource textBlockBg}" x:Name="textBlock" TextWrapping="Wrap" Padding="10" Width="800" Height="100" DockPanel.Dock="Top"/>
+            <TextBox Foreground="{DynamicResource textBlockFg}" Background="{DynamicResource textBlockBg}" FontSize="20" TextChanged="textBox_TextChanged" x:Name="textBox" BorderBrush="#d1d1d1" BorderThickness="0 4 0 0" TextWrapping="Wrap" Padding="10" Width="800"/>
         </DockPanel>
     </DockPanel>
 </Window>

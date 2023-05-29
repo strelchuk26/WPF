@@ -1,8 +1,10 @@
 ﻿using Markov;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,10 +33,40 @@ namespace KeyboardTrainer
         public MainWindow()
 		{
 			InitializeComponent();
+			SetColorsBySystemTheme();
 			textBox.IsEnabled = false;
 			Timer = new DispatcherTimer();
 			Timer.Interval = TimeSpan.FromSeconds(1);
 			Timer.Tick += Timer_Tick;
+		}
+
+		private void SetDarkTheme()
+		{
+			this.Resources["textBlockBg"] = new SolidColorBrush(Color.FromArgb(255, 38, 38, 38));
+			this.Resources["textBlockFg"] = new SolidColorBrush(Colors.White);
+			this.Resources["borderBg"] = new SolidColorBrush(Color.FromArgb(255, 51, 51, 51));
+			this.Resources["buttonBg"] = new SolidColorBrush(Color.FromArgb(255, 204, 204, 204));
+			this.Resources["buttonFg"] = new SolidColorBrush(Color.FromArgb(255, 71, 71, 71));
+			this.Resources["sliderBg"] = new SolidColorBrush(Color.FromArgb(255, 227, 227, 227));
+		}
+
+		private void SetLightTheme()
+		{
+			this.Resources["textBlockBg"] = new SolidColorBrush(Colors.White);
+			this.Resources["textBlockFg"] = new SolidColorBrush(Colors.Black);
+			this.Resources["borderBg"] = new SolidColorBrush(Color.FromArgb(255, 85, 197, 255));
+			this.Resources["buttonBg"] = new SolidColorBrush(Color.FromArgb(255, 255, 233, 37));
+			this.Resources["buttonFg"] = new SolidColorBrush(Color.FromArgb(255, 14, 85, 160));
+			this.Resources["sliderBg"] = new SolidColorBrush(Color.FromArgb(255, 204, 204, 204));
+		}
+
+		private void SetColorsBySystemTheme()
+		{
+			int res = (int)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "AppsUseLightTheme", null);
+			if (res == 0)
+				SetDarkTheme();
+			else
+				SetLightTheme();
 		}
 
 		private void Timer_Tick(object sender, EventArgs e)
