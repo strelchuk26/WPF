@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bogda\\source\\repos\\WPF\\ShulteTable\\ShulteTable.csproj": {}
+    "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\ShulteTable\\ShulteTable.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bogda\\source\\repos\\WPF\\ShulteTable\\ShulteTable.csproj": {
+    "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\ShulteTable\\ShulteTable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bogda\\source\\repos\\WPF\\ShulteTable\\ShulteTable.csproj",
+        "projectUniqueName": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\ShulteTable\\ShulteTable.csproj",
         "projectName": "ShulteTable",
-        "projectPath": "C:\\Users\\bogda\\source\\repos\\WPF\\ShulteTable\\ShulteTable.csproj",
+        "projectPath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\ShulteTable\\ShulteTable.csproj",
         "packagesPath": "C:\\Users\\bogda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bogda\\source\\repos\\WPF\\ShulteTable\\obj\\",
+        "outputPath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\ShulteTable\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bogda\\AppData\\Roaming\\NuGet\\NuGet.Config",

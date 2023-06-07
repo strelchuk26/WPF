@@ -5,122 +5,345 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShulteTable"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="600">
+        Title="MainWindow" Height="600" Width="600"
+        ResizeMode="NoResize">
     <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Foreground" Value="#4a464d"/>
+        <Style TargetType="Border">
+            <Setter Property="BorderThickness" Value="1 1 1 5"/>
+        </Style>
+        <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="35"/>
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="BorderThickness" Value="1 1 1 5"/>
+            <Setter Property="Foreground" Value="#4a464d"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
             <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Opacity" Value="10"/>
-                </Trigger>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation 
+                                Duration="0:0:0.1"
+                                Storyboard.TargetProperty="FontSize"
+                                To="40"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Duration="0:0:0.1"
+                                Storyboard.TargetProperty="FontSize"
+                                To="35"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
             </Style.Triggers>
         </Style>
-        <Style x:Key="purpleButton" BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
+        <Style x:Key="pressedButton" BasedOn="{StaticResource {x:Type Border}}" TargetType="Border">
+            <Setter Property="Background" Value="#694a85"/>
+        </Style>
+        <Style x:Key="purpleButton" BasedOn="{StaticResource {x:Type Border}}" TargetType="Border">
             <Setter Property="Background" Value="#bc84f3"/>
             <Setter Property="BorderBrush" Value="#8c62b5"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Duration="0:0:0.2" To="#c487ff"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Duration="0:0:0.2" To="#bc84f3"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
         </Style>
-        <Style x:Key="whiteButton" BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
-            <Setter Property="Background" Value="#f5f5f5"/>
+        <Style x:Key="whiteButton" BasedOn="{StaticResource {x:Type Border}}" TargetType="Border">
+            <Setter Property="Background" Value="#f0f0f0"/>
             <Setter Property="BorderBrush" Value="#b6b4b6"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Duration="0:0:0.2" To="#fafafa"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Duration="0:0:0.2" To="#f5f5f5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
         </Style>
-        <Style x:Key="blueButton" BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
+        <Style x:Key="blueButton" BasedOn="{StaticResource {x:Type Border}}" TargetType="Border">
             <Setter Property="Background" Value="#6a99c9"/>
             <Setter Property="BorderBrush" Value="#507195"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Duration="0:0:0.2" To="#84bcf5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Duration="0:0:0.2" To="#6a99c9"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
         </Style>
-        <Style x:Key="greenButton" BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
+        <Style x:Key="greenButton" BasedOn="{StaticResource {x:Type Border}}" TargetType="Border">
             <Setter Property="Background" Value="#96d153"/>
             <Setter Property="BorderBrush" Value="#709a40"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Duration="0:0:0.2" To="#a2e359"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Duration="0:0:0.2" To="#96d153"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
         </Style>
-        <Style x:Key="redButton" BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
+        <Style x:Key="redButton" BasedOn="{StaticResource {x:Type Border}}" TargetType="Border">
             <Setter Property="Background" Value="#df5470"/>
             <Setter Property="BorderBrush" Value="#9d466f"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Duration="0:0:0.2" To="#f7607f"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Duration="0:0:0.2" To="#df5470"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
         </Style>
-        <Style x:Key="yellowButton" BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
+        <Style x:Key="yellowButton" BasedOn="{StaticResource {x:Type Border}}" TargetType="Border">
             <Setter Property="Background" Value="#efbf3f"/>
             <Setter Property="BorderBrush" Value="#a27d54"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Duration="0:0:0.2" To="#ffca3d"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Duration="0:0:0.2" To="#efbf3f"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
         </Style>
-        <Style x:Key="eyeIconButton" BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
+        <Style x:Key="eyeIconButton" BasedOn="{StaticResource {x:Type Border}}" TargetType="Border">
             <Setter Property="Background" Value="#6e6e6e"/>
             <Setter Property="BorderBrush" Value="#363636"/>
         </Style>
     </Window.Resources>
     <Grid>
-        <Border Background="#ddd3e6" Margin="10">
-            <Border BorderBrush="#50326d" CornerRadius="10" BorderThickness="10">
-                <Grid Background="#50326d" x:Name="grid">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Button Click="Button_Click" Style="{StaticResource purpleButton}" Grid.Column="0" Grid.Row="0"/>
-                    <Button Style="{StaticResource whiteButton}" Grid.Column="1" Grid.Row="0"/>
-                    <Button Style="{StaticResource blueButton}" Grid.Column="2" Grid.Row="0"/>
-                    <Button Style="{StaticResource whiteButton}" Grid.Column="3" Grid.Row="0"/>
-                    <Button Style="{StaticResource greenButton}" Grid.Column="4" Grid.Row="0"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="5" Grid.Row="0"/>
-                    <Button Style="{StaticResource greenButton}" Grid.Column="6" Grid.Row="0"/>
-                    <Button Style="{StaticResource redButton}" Grid.Column="0" Grid.Row="1"/>
-                    <Button Style="{StaticResource redButton}" Grid.Column="1" Grid.Row="1"/>
-                    <Button Style="{StaticResource redButton}" Grid.Column="2" Grid.Row="1"/>
-                    <Button Style="{StaticResource whiteButton}" Grid.Column="3" Grid.Row="1"/>
-                    <Button Style="{StaticResource redButton}" Grid.Column="4" Grid.Row="1"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="5" Grid.Row="1"/>
-                    <Button Style="{StaticResource greenButton}" Grid.Column="6" Grid.Row="1"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="0" Grid.Row="2"/>
-                    <Button Style="{StaticResource whiteButton}" Grid.Column="1" Grid.Row="2"/>
-                    <Button Style="{StaticResource whiteButton}" Grid.Column="2" Grid.Row="2"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="3" Grid.Row="2"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="4" Grid.Row="2"/>
-                    <Button Style="{StaticResource whiteButton}" Grid.Column="5" Grid.Row="2"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="6" Grid.Row="2"/>
-                    <Button Style="{StaticResource whiteButton}" Grid.Column="0" Grid.Row="3"/>
-                    <Button Style="{StaticResource yellowButton}" Grid.Column="1" Grid.Row="3"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="2" Grid.Row="3"/>
-                    <Button Style="{StaticResource eyeIconButton}" x:Name="eyeIcon" Grid.Column="3" Grid.Row="3"/>
-                    <Button Style="{StaticResource yellowButton}" Grid.Column="4" Grid.Row="3"/>
-                    <Button Style="{StaticResource blueButton}" Grid.Column="5" Grid.Row="3"/>
-                    <Button Style="{StaticResource whiteButton}" Grid.Column="6" Grid.Row="3"/>
-                    <Button Style="{StaticResource greenButton}" Grid.Column="0" Grid.Row="4"/>
-                    <Button Style="{StaticResource greenButton}" Grid.Column="1" Grid.Row="4"/>
-                    <Button Style="{StaticResource yellowButton}" Grid.Column="2" Grid.Row="4"/>
-                    <Button Style="{StaticResource whiteButton}" Grid.Column="3" Grid.Row="4"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="4" Grid.Row="4"/>
-                    <Button Style="{StaticResource whiteButton}" Grid.Column="5" Grid.Row="4"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="6" Grid.Row="4"/>
-                    <Button Style="{StaticResource blueButton}" Grid.Column="0" Grid.Row="5"/>
-                    <Button Style="{StaticResource blueButton}" Grid.Column="1" Grid.Row="5"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="2" Grid.Row="5"/>
-                    <Button Style="{StaticResource yellowButton}" Grid.Column="3" Grid.Row="5"/>
-                    <Button Style="{StaticResource blueButton}" Grid.Column="4" Grid.Row="5"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="5" Grid.Row="5"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="6" Grid.Row="5"/>
-                    <Button Style="{StaticResource yellowButton}" Grid.Column="0" Grid.Row="6"/>
-                    <Button Style="{StaticResource whiteButton}" Grid.Column="1" Grid.Row="6"/>
-                    <Button Style="{StaticResource greenButton}" Grid.Column="2" Grid.Row="6"/>
-                    <Button Style="{StaticResource purpleButton}" Grid.Column="3" Grid.Row="6"/>
-                    <Button Style="{StaticResource redButton}" Grid.Column="4" Grid.Row="6"/>
-                    <Button Style="{StaticResource redButton}" Grid.Column="5" Grid.Row="6"/>
-                    <Button Style="{StaticResource redButton}" Grid.Column="6" Grid.Row="6"/>
-                </Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Border CornerRadius="10" Background="#ddd3e6" Padding="10" Margin="8">
+                <Border BorderBrush="#50326d" CornerRadius="10" BorderThickness="10">
+                    <Grid Background="#50326d" x:Name="grid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="0" Grid.Row="0">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="1" Grid.Row="0">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="2" Grid.Row="0">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="3" Grid.Row="0">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="4" Grid.Row="0">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="5" Grid.Row="0">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="6" Grid.Row="0">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="0" Grid.Row="1">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="1" Grid.Row="1">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="2" Grid.Row="1">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="3" Grid.Row="1">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="4" Grid.Row="1">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="5" Grid.Row="1">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="6" Grid.Row="1">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="0" Grid.Row="2">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="1" Grid.Row="2">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="2" Grid.Row="2">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="3" Grid.Row="2">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="4" Grid.Row="2">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="5" Grid.Row="2">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="6" Grid.Row="2">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="0" Grid.Row="3">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="1" Grid.Row="3">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="2" Grid.Row="3">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border Name="eyeIcon" Style="{StaticResource eyeIconButton}" Grid.Column="3" Grid.Row="3">
+                            <TextBlock Text="X"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="4" Grid.Row="3">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="5" Grid.Row="3">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="6" Grid.Row="3">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="0" Grid.Row="4">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="1" Grid.Row="4">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="2" Grid.Row="4">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="3" Grid.Row="4">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="4" Grid.Row="4">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="5" Grid.Row="4">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="6" Grid.Row="4">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="0" Grid.Row="5">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="1" Grid.Row="5">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="2" Grid.Row="5">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="3" Grid.Row="5">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="4" Grid.Row="5">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="5" Grid.Row="5">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="6" Grid.Row="5">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="0" Grid.Row="6">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="1" Grid.Row="6">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="2" Grid.Row="6">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="3" Grid.Row="6">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="4" Grid.Row="6">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="5" Grid.Row="6">
+                            <TextBlock Text="1"/>
+                        </Border>
+                        <Border MouseDown="Border_MouseDown" Style="{StaticResource purpleButton}" Grid.Column="6" Grid.Row="6">
+                            <TextBlock Text="1"/>
+                        </Border>
+                    </Grid>
+                </Border>
             </Border>
-        </Border>
+        </Grid>
     </Grid>
-    
 </Window>
