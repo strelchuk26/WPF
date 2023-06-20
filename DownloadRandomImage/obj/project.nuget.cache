@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Hzsg4SmL60FxmYJMvaBst3kEDyrPgukOAM2RnH7CXr+Mg5ySr0jCOT6yZfAdGXttr9S8IQv60HANPNZkxrnMvg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bogda\\source\\repos\\WPF\\DownloadRandomImage\\DownloadRandomImage.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bogda\\.nuget\\packages\\ookii.dialogs.windowsforms\\4.0.0\\ookii.dialogs.windowsforms.4.0.0.nupkg.sha512",
+    "C:\\Users\\bogda\\.nuget\\packages\\ookii.dialogs.winforms\\4.0.0\\ookii.dialogs.winforms.4.0.0.nupkg.sha512",
+    "C:\\Users\\bogda\\.nuget\\packages\\system.resources.extensions\\6.0.0\\system.resources.extensions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
