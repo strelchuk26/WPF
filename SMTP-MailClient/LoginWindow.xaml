@@ -1,0 +1,33 @@
+﻿<Window x:Class="SMTP_MailClient.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SMTP_MailClient"
+        mc:Ignorable="d"
+       Title="LoginWinfow" Height="500" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" FontSize="30" FontWeight="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Authentication</Label>
+        <Grid Grid.Row="1" Height="200" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label FontSize="20" Grid.Row="0" Grid.Column="0">Email:</Label>
+            <TextBox Margin="10" Grid.Row="0" Grid.Column="1" x:Name="emailTxtBox"></TextBox>
+            <Label FontSize="20" Grid.Row="1" Grid.Column="0">Password:</Label>
+            <TextBox Margin="10" Grid.Row="1" Grid.Column="1" x:Name="passwordTxtBox"></TextBox>
+            <Button Click="okBtnClick" Margin="10" Grid.Row="2" Grid.Column="0">Ok</Button>
+            <Button Click="cancelBtnClick" Margin="10" Grid.Row="2" Grid.Column="1">Cancel</Button>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="SMTP_MailClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SMTP_MailClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1000">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Right" Margin="10" MinWidth="300">
+            <TextBlock FontWeight="Bold" DockPanel.Dock="Top" TextAlignment="Center" FontSize="20">Date:</TextBlock>
+            <TextBlock Width="300" TextWrapping="Wrap" x:Name="msgDateTxtBlock" DockPanel.Dock="Top" TextAlignment="Center" FontSize="15">20.03.2023</TextBlock>
+            <TextBlock FontWeight="Bold" DockPanel.Dock="Top" TextAlignment="Center" FontSize="20">From:</TextBlock>
+            <TextBlock Width="300" TextWrapping="Wrap" Name="msgFromTxtBlock" DockPanel.Dock="Top" TextAlignment="Center" FontSize="15">dasdasd@gmail.com</TextBlock>
+            <TextBlock FontWeight="Bold" DockPanel.Dock="Top" TextAlignment="Center" FontSize="20">Subject:</TextBlock>
+            <TextBlock Width="300" TextWrapping="Wrap" x:Name="msgSubjectTxtBlock" DockPanel.Dock="Top" TextAlignment="Center" FontSize="15">Important subject</TextBlock>
+            <TextBlock FontWeight="Bold" DockPanel.Dock="Top" TextAlignment="Center" FontSize="20">Text:</TextBlock>
+            <TextBox x:Name="msgTextTxtBlock" IsReadOnly="True" FontSize="15" Width="300" TextWrapping="Wrap">Lordasdasemsdasddsadasasdadsadsdasdsfhgfghfghfghgfhffghfadas</TextBox>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Left">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" DockPanel.Dock="Top">
+                <Button Margin="10" Click="ShowAllMessages" Width="200" Height="50">SHOW ALL</Button>
+                <Button Margin="10" Click="DeleteMessageBtnClick" Width="200" Height="50">DELETE</Button>
+            </StackPanel>
+            <ListBox SelectionChanged="SelectedMessageChanged" Margin="10" x:Name="list"/>
+        </DockPanel>
+    </DockPanel>
+</Window>
