@@ -25,8 +25,8 @@ namespace SMTP_MailClient
 {
 	public partial class MainWindow : Window
 	{
-		private string userMail = "bogda026@gmail.com";
-		private string userPassword = "oaoigfejixnyjqmy";
+		private string userMail = "yourgmail@gmail.com";
+		private string userPassword = "yourpassword";
 		private Message SelectedMessage;
 
         public MainWindow()
