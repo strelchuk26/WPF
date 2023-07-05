@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FEq+0NMzLPny7Za+N4HRHjIkBW3YkV30fDvjvefzMMYf0minW5VMtaIvf9BYsQmMqP6FH9un2QRDkyu9PrcoAg==",
+  "dgSpecHash": "qj2Vgr6+Z04CnZUFBBykjbiOJ4WuI1O5m+ZDEqeIk1Wvr4K+dVGfMcswgzn9y4VpJBbtYOJZ30CbTvmsbcQ/lg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bogda\\source\\repos\\WPF\\UDP-Chat\\Server\\Server.csproj",
+  "projectFilePath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\UDP-Chat\\Server\\Server.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

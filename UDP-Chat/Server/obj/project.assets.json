@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bogda\\source\\repos\\WPF\\UDP-Chat\\Server\\Server.csproj",
+      "projectUniqueName": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\UDP-Chat\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "C:\\Users\\bogda\\source\\repos\\WPF\\UDP-Chat\\Server\\Server.csproj",
+      "projectPath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\UDP-Chat\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\bogda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bogda\\source\\repos\\WPF\\UDP-Chat\\Server\\obj\\",
+      "outputPath": "C:\\Users\\bogda\\OneDrive\\Документы\\GitHub\\WPF\\UDP-Chat\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bogda\\AppData\\Roaming\\NuGet\\NuGet.Config",
