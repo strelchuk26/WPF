@@ -1,0 +1,109 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:uc="clr-namespace:Client.CustomControls"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Messanger" Height="600" Width="900">
+    <Window.Resources>
+        <Style x:Key="PinkNeonOutline" TargetType="{x:Type Border}">
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="BorderBrush" Value="#AA00FF"/>
+            <Setter Property="CornerRadius" Value="20"/>
+        </Style>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border x:Name="border"
+                                Background="#9C27B0"
+                                CornerRadius="20">
+                            
+                            <TextBlock Text="SEND"
+                                       Foreground="{DynamicResource MaterialDesignBody}"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontSize="20"
+                                       FontWeight="Black"/>
+                        </Border>
+                        <!--<ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#c42fde"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>-->
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="1"
+                    CornerRadius="20, 0, 0, 20">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                        <GradientStop Color="#9C27B0" Offset="0"/>
+                        <GradientStop Color="#4A148C" Offset="0.95"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <DockPanel Margin="10">
+                    <TextBlock TextAlignment="Center"
+                               FontFamily="Montserrat"
+                               Foreground="{DynamicResource MaterialDesignBody}"
+                               FontSize="30"
+                               FontWeight="Light"
+                               DockPanel.Dock="Top">
+                        MEMBERS
+                    </TextBlock>
+                    <Border Style="{StaticResource PinkNeonOutline}"
+                            Padding="5">
+                        <ListBox ItemsSource="{Binding ChatMembers}"/>
+                    </Border>
+                </DockPanel>
+            </Border>
+            <DockPanel Margin="10">
+                <DockPanel DockPanel.Dock="Bottom">
+                    <Button Content="SEND"
+                            DockPanel.Dock="Right"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Margin="10 0 0 0"
+                            Width="100"
+                            Height="40"
+                            IsDefault="True"
+                            Command="{Binding SendMessage}"/>
+                    <Border Style="{StaticResource PinkNeonOutline}">
+                        <TextBox Text="{Binding CurrentMessage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 Height="40"
+                                 BorderThickness="0"
+                                 FontFamily="{DynamicResource MaterialDesignFont}"
+                                 Foreground="{DynamicResource MaterialDesignBody}"
+                                 FontSize="25"
+                                 FontWeight="Bold"
+                                 Padding="5 5 0 0"/>
+                    </Border>
+                </DockPanel>
+
+                <Border Margin="0 10"
+                        Style="{StaticResource PinkNeonOutline}">
+                    <ListBox ItemsSource="{Binding Messages}"/>
+                </Border>
+            </DockPanel>
+        </Grid>
+    </Border>
+</Window>

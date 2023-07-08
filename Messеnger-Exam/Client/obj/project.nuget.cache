@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "oL6AzR9hfm5gP89t4ivSHq2R0TlxcE0W6mtC5dQAh9aRtRBJo7bNQcIf7NXTd22KG2byIRuRgONqS98682S6cg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bogda\\source\\repos\\WPF\\Messеnger-Exam\\Client\\Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bogda\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
+    "C:\\Users\\bogda\\.nuget\\packages\\materialdesigncolors\\2.1.4\\materialdesigncolors.2.1.4.nupkg.sha512",
+    "C:\\Users\\bogda\\.nuget\\packages\\materialdesignthemes\\4.9.0\\materialdesignthemes.4.9.0.nupkg.sha512",
+    "C:\\Users\\bogda\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
+    "C:\\Users\\bogda\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\bogda\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
